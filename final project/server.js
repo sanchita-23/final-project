@@ -7,7 +7,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-// Connect to MongoDB (assuming you use MongoDB for data storage)
+// Connect to MongoDB (assuming  use MongoDB for data storage)
 mongoose.connect('mongodb://localhost:27017/expense-tracker', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -20,7 +20,7 @@ const userSchema = new mongoose.Schema({
 });
 const User = mongoose.model('User', userSchema);
 
-// Define expense schema and model
+// expense schema and model
 const expenseSchema = new mongoose.Schema({
   userId: mongoose.Schema.Types.ObjectId,
   name: String,
