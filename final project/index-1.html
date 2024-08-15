@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Registration Form -->
+        <div class="register-box" id="register-box">
+            <h1>Expense Tracker</h1>
+            <input type="text" id="name" placeholder="Enter your name">
+            <input type="email" id="email" placeholder="Enter Your email">
+            <button onclick="register()">Register</button>
+        </div>
+
+        <!-- Dashboard -->
+        <div class="dashboard" id="dashboard" style="display: none;">
+            <div class="add-expense">
+                <h2>Add Expense</h2>
+                <input type="text" id="expenseName" placeholder="Your Expense name">
+                <input type="text" id="description" placeholder="Your Descr">
+                <input type="text" id="category" placeholder="Category">
+                <input type="number" id="amount" placeholder="Amount $">
+                <select id="creditDebit">
+                    <option value="credit">Credit</option>
+                    <option value="debit">Debit</option>
+                </select>
+                <button onclick="addExpense()">Submit</button>
+            </div>
+
+            <div class="expense-history">
+                <h2>Expense History</h2>
+                <ul id="history"></ul>
+                <p id="total">Total - $0</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
